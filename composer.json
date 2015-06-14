@@ -1,0 +1,22 @@
+{
+  "name": "vendora/bankmellat",
+  "version": "0.1",
+  "description": "An abstract PHP library for www.bankmellat.ir online payment system.",
+  "require": {
+    "fergusean/nusoap": "0.9.5"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-0": { "Vendora\\Payment\\BankMellat": "src/" }
+  },
+  "authors": [
+    {
+      "name": "aramalipoor",
+      "email": "aram.alipoor@gmail.com"
+    },
+    {
+      "name":     "Vendora Team",
+      "homepage": "http://vendora.org"
+    }
+  ]
+}
