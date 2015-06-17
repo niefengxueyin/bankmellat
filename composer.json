@@ -1,22 +1,21 @@
 {
-  "name": "vendora/bankmellat",
+  "name": "ravaj-group/bankmellat",
   "version": "0.1",
   "description": "An abstract PHP library for www.bankmellat.ir online payment system.",
+  "homepage": "https://github.com/ravaj-group/bankmellat",
   "require": {
     "fergusean/nusoap": "0.9.5"
   },
   "license": "MIT",
   "autoload": {
-    "psr-0": { "Vendora\\Payment\\BankMellat": "src/" }
+    "psr-0": {
+      "Ravaj\\Component\\Payment\\BankMellat": "src/"
+    }
   },
   "authors": [
     {
-      "name": "aramalipoor",
-      "email": "aram.alipoor@gmail.com"
-    },
-    {
-      "name":     "Vendora Team",
-      "homepage": "http://vendora.org"
+      "name": "Ravaj Team",
+      "homepage": "http://ravaj.ir"
     }
   ]
 }

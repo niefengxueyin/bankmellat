@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright (c) 2014 Vendora
+ * Copyright (c) 2014 Ravaj
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -13,9 +13,9 @@
 // Composer autoloader
 include_once('../vendor/autoload.php');
 
-use Vendora\Payment\BankMellat\BankMellat;
-use Vendora\Payment\BankMellat\Order;
-use Vendora\Payment\BankMellat\Request;
+use Ravaj\Component\Payment\BankMellat\BankMellat;
+use Ravaj\Component\Payment\BankMellat\Order;
+use Ravaj\Component\Payment\BankMellat\Request;
 
 // Initial
 session_start();

@@ -18,5 +18,5 @@ composer require vendora/bankmellat
 I tried to comment every little piece of this library but anyway I promise I'll provide useful docs in near future. :)
 
 ## MIT License
-Copyright (c) 2014 Vendora. 
+Copyright (c) 2014 Ravaj. 
 License can be found [here](LICENSE).

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright (c) 2014 Vendora
+ * Copyright (c) 2014 Ravaj
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -10,7 +10,7 @@
  * @license MIT
  */
 
-namespace Vendora\Payment\BankMellat;
+namespace Ravaj\Component\Payment\BankMellat;
 
 class BankMellat {
 
