@@ -11,7 +11,7 @@ If you want to use this library in your composer project. You can easily require
 
 ```sh
 composer init
-composer require vendora/bankmellat
+composer require ravaj-group/bankmellat
 ```
 
 ## Documentation
