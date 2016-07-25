@@ -1,6 +1,6 @@
 {
   "name": "ravaj-group/bankmellat",
-  "version": "0.1",
+  "version": "0.2",
   "description": "An abstract PHP library for www.bankmellat.ir online payment system.",
   "homepage": "https://github.com/ravaj-group/bankmellat",
   "require": {

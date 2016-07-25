@@ -141,12 +141,10 @@ class Gateway {
         $result = (array) $this->call('bpPayRequest', $parameters);
 
         $referenceId = null;
-        list($responseCode, $referenceId) = explode(',', is_array($result) ? $result['return'] : $result);
+        @list($responseCode, $referenceId) = explode(',', is_array($result) ? $result['return'] : $result);
 
         if ($responseCode != "0") {
-            throw new \RuntimeException(
-                sprintf('Received error from BankMellat service with code (%s)', $responseCode)
-            );
+            throw new BankWebserviceException($responseCode);
         }
 
         // Update order with new Reference ID then set a redirect URL
@@ -179,15 +177,13 @@ class Gateway {
         $responseCode = is_array($result) ? $result['return'] : $result;
 
         if ($responseCode != "0") {
-            throw new \RuntimeException(
-                sprintf('Received error from BankMellat service with code (%s)', $responseCode)
-            );
+            throw new BankWebserviceException($responseCode);
         }
 
         // Update order with new verified status
         $order->setStatus(Order::STATUS_VERIFIED);
 
-        return true;
+        return $order;
     }
 
     /**
@@ -213,15 +209,13 @@ class Gateway {
         $responseCode = is_array($result) ? $result['return'] : $result;
 
         if ($responseCode != "0") {
-            throw new \RuntimeException(
-                sprintf('Received error from BankMellat service with code (%s)', $responseCode)
-            );
+            throw new BankWebserviceException($responseCode);
         }
 
         // Update order with new settled status (money deposited successfully)
         $order->setStatus(Order::STATUS_SETTLED);
 
-        return true;
+        return $order;
     }
 
     /**
@@ -247,15 +241,13 @@ class Gateway {
         $responseCode = is_array($result) ? $result['return'] : $result;
 
         if ($responseCode != "0") {
-            throw new \RuntimeException(
-                sprintf('Received error from BankMellat service with code (%s)', $responseCode)
-            );
+            throw new BankWebserviceException($responseCode);
         }
 
         // Update order with new refunded status (money goes back to customer)
         $order->setStatus(Order::STATUS_REFUNDED);
 
-        return true;
+        return $order;
     }
 
 

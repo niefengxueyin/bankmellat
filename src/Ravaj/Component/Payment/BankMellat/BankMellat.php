@@ -159,9 +159,7 @@ class BankMellat {
         $cardHolderPan  = $this->request->get('CardHolderPan');
 
         if ($resultCode != '0') {
-            throw new \RuntimeException(
-                sprintf('Could not complete the payment. (Error: %s)', $resultCode)
-            );
+            throw new BankWebserviceException($resultCode);
         }
 
         $order->setCardHolderInfo($cardHolderInfo);
